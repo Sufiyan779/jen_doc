@@ -5,7 +5,7 @@ pipeline{
         stage{
             steps{
                 git url: https://github.com/Sufiyan779/jen_doc.git,
-                git branch: main
+                branch: master
             }
         }
         stage("install docker"){
