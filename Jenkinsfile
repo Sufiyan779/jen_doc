@@ -1,5 +1,5 @@
 pipeline{
-    agent (label "OPENJDK-11")
+    agent {label "OPENJDK-11"}
 
     stages("pull form vcs"){
         stage{
