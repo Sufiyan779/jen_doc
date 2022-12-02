@@ -4,8 +4,8 @@ pipeline{
     stages("pull form vcs"){
         stage{
             steps{
-                git url: https://github.com/Sufiyan779/jen_doc.git,
-                branch: master
+                git url: "https://github.com/Sufiyan779/jen_doc.git",
+                branch: 'master'
             }
         }
         stage("install docker"){
