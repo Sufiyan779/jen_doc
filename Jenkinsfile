@@ -6,5 +6,15 @@ pipeline {
                 sh 'dockerfile.sh'
             }
         }
+         stage('pull alpine') {
+            steps {
+                sh 'docker pull alpine'
+            }
+        }
+        stage('list image') {
+            steps {
+                sh 'docker image ls'
+                }
+           }
      }
 }
