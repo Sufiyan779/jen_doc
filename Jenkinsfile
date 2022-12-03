@@ -1,20 +1,17 @@
 pipeline {
     agent {label 'OPENJDK-11' }
     stages {
-        stage('To show docker info') {
+        stage('create image') 
+        {
             steps {
-                sh 'dockerfile.sh'
+                sh 'docker image build -t spring:1.0 .'
             }
         }
-         stage('pull alpine') {
-            steps {
-                sh 'docker pull alpine'
-            }
-        }
-        stage('list image') {
+        stage('list image') 
+        {
             steps {
                 sh 'docker image ls'
-                }
-           }
-     }
+            }
+        }
+    }
 }
